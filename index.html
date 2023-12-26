@@ -1,22 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Форма для сохранения данных</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для обратной связи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 12px);
+            padding: 6px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
-
-    <h2>Введите данные</h2>
-
-    <form action="save.php" method="post">
-        <label for="name">Имя:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
-        <input type="submit" value="Отправить">
-    </form>
-
+    <div class="container">
+        <h2>Заполните форму для обратной связи</h2>
+        <form action="save_data.php" method="post">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" placeholder="Введите ваше имя" required><br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Введите ваш email" required><br>
+            <label for="instagram">Instagram:</label>
+            <input type="text" id="instagram" name="instagram" placeholder="Ваш профиль в Instagram"><br>
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" placeholder="Введите ваше сообщение" style="height: 100px;"
+                required></textarea><br>
+            <input type="submit" value="Отправить">
+        </form>
+        <p>Мы свяжемся с вами в ближайшее время! Если у вас есть вопросы, свяжитесь с нами по номеру: +X XXX XXX XXXX.
+        </p>
+    </div>
 </body>
 
 </html>
